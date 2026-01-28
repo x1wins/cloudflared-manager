@@ -24,14 +24,14 @@ class BTree
   private
 
   def insert_node(node, key)
-    if node.key > key
-      if node.left.nil?
+    if key < node.key
+      unless node.left
         node.left = Node.new(key)
       else
         insert_node(node.left, key)
       end
     else
-      if node.right.nil?
+      unless node.right
         node.right = Node.new(key)
       else
         insert_node(node.right, key)
@@ -40,7 +40,7 @@ class BTree
   end
 
   def inorder_traverse(node)
-    return unless node
+    return if node.nil?
 
     inorder_traverse(node.left)
     print "#{node.key} "
@@ -49,18 +49,18 @@ class BTree
 
   def display
     inorder_traverse(@root)
-    puts 
+    puts
   end
 end
 
-# Example usage:
-btree = BTree.new
-btree.insert(50)
-btree.insert(30)
-btree.insert(20)
-btree.insert(40)
-btree.insert(70)
-btree.insert(60)
-btree.insert(80)
-
-btree.display  # Output: 20 30 40 50 60 70 80
+if __FILE__ == $0
+  bt = BTree.new
+  bt.insert(50)
+  bt.insert(30)
+  bt.insert(20)
+  bt.insert(40)
+  bt.insert(70)
+  bt.insert(60)
+  bt.insert(80)
+  bt.display  # Output: 20 30 40 50 60 70 80
+end
