@@ -49,7 +49,7 @@ class BTree
 
   def display
     inorder_traverse(@root)
-    puts
+    puts 
   end
 end
 
