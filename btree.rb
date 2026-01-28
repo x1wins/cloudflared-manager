@@ -2,9 +2,9 @@ class Node
   attr_accessor :key, :left, :right
 
   def initialize(key)
-    @key = key
-    @left = nil
-    @right = nil
+     @key = key
+     @left = nil
+     @right = nil
   end
 end
 
@@ -15,7 +15,7 @@ class BTree
 
   def insert(key)
     if @root.nil?
-      @root = Node.new(key)
+       @root = Node.new(key)
     else
       insert_node(@root, key)
     end
