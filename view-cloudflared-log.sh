@@ -9,4 +9,4 @@ if [ ! -f "$LOG_FILE" ]; then
     exit 1
 fi
 
-tail -f "$LOG_FILE"
+tail -n 100 -f "$LOG_FILE"
