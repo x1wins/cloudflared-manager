@@ -5,12 +5,12 @@ Management scripts for Cloudflare Tunnel to expose local services publicly.
 ## Quick Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/cloudflared-manager/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/x1wins/cloudflared-manager/main/install.sh | bash
 ```
 
 Or inspect before running:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/cloudflared-manager/main/install.sh -o install.sh
+curl -fsSL https://raw.githubusercontent.com/x1wins/cloudflared-manager/main/install.sh -o install.sh
 bash install.sh
 ```
 
@@ -25,7 +25,7 @@ Then configure and start:
 If you prefer to clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/cloudflared-manager.git
+git clone https://github.com/x1wins/cloudflared-manager.git
 cd cloudflared-manager
 chmod +x *.sh
 ./init-cloudflared.sh
