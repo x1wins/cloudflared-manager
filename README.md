@@ -101,6 +101,16 @@ launchctl unload ~/Library/LaunchAgents/com.cloudflare.cloudflared.plist
 launchctl list | grep cloudflared
 ```
 
+**Auto-start on Linux restart (cron):**
+
+```bash
+# Edit crontab
+crontab -e
+
+# Add this line (replace /path/to with actual path)
+@reboot cd /path/to/cloudflared-manager && ./start-cloudflared.sh
+```
+
 ## Multi-Project Cloudflare Tunnel Setup
 
 For this project (port 3010):
